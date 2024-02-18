@@ -1,0 +1,171 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    padding: auto;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #feac5e;
+}
+
+body {
+    background: linear-gradient(#35395f, #522160) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.box {
+    margin: 40px;
+    position: relative;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.23,1.83,0.45,0.19);
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+.box p {
+    position: absolute;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 0px;
+    letter-spacing: 2.5px;
+    font-family: 'Righteous', sans-serif;
+}
+
+
+.box:first-child .circle {
+    background-image: url('images/memory\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(2) .circle {
+    background-image: url('images/Particule\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(3) .circle {
+    background-image: url('images/Password\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(4) .circle {
+    background-image: url('images/colors\ 3.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(5) .circle {
+    background-image: url('images/player\ audiau.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(6) .circle {
+    background-image: url('images/List.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.box:nth-child(7) .circle {
+    background-image: url('images/Calculator.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box:nth-child(8) .circle {
+    background-image: url('images/Animation.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding-top: 125px;
+}
+
+@keyframes boxMagic {
+    from {
+        box-shadow: 
+        0 0 0 #feac5e,
+        0 0 0 #c779d0,
+        0 0 0 #4bc0c8,
+        0 0 0 #42db75;
+    }
+    to {
+        box-shadow: 
+        0 -4px 0 #feac5e,
+        -4px 0 0 #c779d0,
+        0 4px 0 #4bc0c8,
+        4px 0 0 #42db75;
+    }
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 #feac5e, 0 0 0 #c779d0, 0 0 0 #4bc0c8, 0 0 0 #42db75;
+    animation: 1s linear infinite alternate boxMagic, 
+               4s linear infinite spinning;
+}
+
+
+
+
